@@ -63,6 +63,7 @@ class TaskDetailApiView(RetrieveDestroyAPIView):
         
 
     def put(self, request, slug):
+        request.data._mutable = True
         task = self.get_object(slug)
         serializer = TaskSerializer(task, data=request.data, partial=True )
         serializer.initial_data['slug']=slug        # to keep the initial slug unchanged

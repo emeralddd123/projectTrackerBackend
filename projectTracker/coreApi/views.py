@@ -2,14 +2,15 @@ from django.shortcuts import get_object_or_404
 from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework import status
+from rest_framework.generics import ListCreateAPIView, RetrieveDestroyAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from .serializers import TaskSerializer
 from .models import Task
 # Create your views here.
-class TaskListApiView(APIView):
+class TaskListApiView(ListCreateAPIView):
     permission_classes = [IsAuthenticated]
-    
+    serializer_class = TaskSerializer
     def get(self, request, *args, **kwargs):
         '''
         List all the note items for given requested user
@@ -40,7 +41,10 @@ class TaskListApiView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 
-class TaskDetailApiView(APIView):
+class TaskDetailApiView(RetrieveDestroyAPIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = TaskSerializer
+    
     """
     Retrieve, update or delete a note instance.
     """
@@ -62,7 +66,7 @@ class TaskDetailApiView(APIView):
         note = self.get_object(slug)
         serializer = TaskSerializer(note, data=request.data, partial=True )
         serializer.initial_data['slug']=slug        # to keep the initial slug unchanged
-        serializer.initial_data['user']=request.user.id
+        serializer.initial_data['user']=request.user.id #prevent reassigning task to another user
         if serializer.is_valid():
             #serializer.validated_data['slug']=note_slug
             #Note.delete(slug=note_slug)

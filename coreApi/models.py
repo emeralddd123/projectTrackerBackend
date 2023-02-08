@@ -28,7 +28,7 @@ class Task(models.Model):
     priority = models.CharField(max_length=10, choices=PRIORITY_CHOICES)
     status = models.CharField(max_length=15, choices=STATUS_CHOICES)
     date = models.DateField(blank=True,null=True)
-    remind = models.BooleanField(default=False)
+    remind = models.BooleanField(default=False,blank=True,null=True)
     
     
     def __str__(self):

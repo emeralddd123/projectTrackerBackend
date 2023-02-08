@@ -11,6 +11,8 @@ from .models import Task
 class TaskListApiView(ListCreateAPIView):
     permission_classes = [IsAuthenticated]
     serializer_class = TaskSerializer
+    queryset=Task.objects.all()
+    
     def get(self, request, *args, **kwargs):
         '''
         List all the note items for given requested user

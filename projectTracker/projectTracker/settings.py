@@ -172,8 +172,9 @@ REST_FRAMEWORK = {
 }
 
 REST_AUTH_SERIALIZERS = {
-    #'LOGIN_SERIALIZER': 'authSystem.mod_serializers.Mod_LoginSerializer',
-        
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 100,
+            
     'REST_USE_JWT': True,
     
     'OLD_PASSWORD_FIELD_ENABLED' : True

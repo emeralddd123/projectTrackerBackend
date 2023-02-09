@@ -1,38 +1,38 @@
 # projectTrackerBackend
 
-after cloning the project, and enter the project folder 'projectTrackerBackend'
+after cloning the project, and enter the project folder 'projectTrackerBackend'  <br />
 
-install virtualenv with the command
+install virtualenv with the command  <br />
 
 # pip install virtualenv
 
-then create a virtualenvironment using
+then create a virtualenvironment using  <br />
 
 # virtualenv venv
 
-then activate the virtualenvironment with the command
+then activate the virtualenvironment with the command  <br />
 
 # venv/Scripts/activate
 
-install the reuirements by running
+install the reuirements by running  <br />
 
 # pip install -r requirements.txt
 
-then start the server by running
+then start the server by running  <br />
 
 # python manage.py runserver
 
-then head to localhost:8000 to see the available__
+then head to localhost:8000 to see the available  <br />
 
-the full documentation of the API is available at localhost:800/docs__
+the full documentation of the API is available at localhost:800/docs <br />
 
-incase you want to acces the admin panel, you'll neeed to create superuser, run the following command from the your terminal__
+incase you want to acces the admin panel, you'll neeed to create superuser, run the following command from the your terminal <br />
 
-# python manage.py createsuperuser
+# python manage.py createsuperuser <br />
 
-then head to __
+then head to  <br />
 
-localhost:8000/admin__
+localhost:8000/admin  <br />
 for the full documentation at localhost:8000/docs
 .![Screenshot 2023-02-09 160912](https://user-images.githubusercontent.com/93847541/217851770-71190036-52cb-4448-b1ce-9ce6f09a5e6e.png)
 

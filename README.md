@@ -26,10 +26,13 @@ then head to localhost:8000 to see the available__
 
 the full documentation of the API is available at localhost:800/docs__
 
-to create superuser, run the following command from the your terminal__
+incase you want to acces the admin panel, you'll neeed to create superuser, run the following command from the your terminal__
 
 # python manage.py createsuperuser
 
+then head to __
+
+localhost:8000/admin
 for the full documentation at localhost:8000/docs
 .![Screenshot 2023-02-09 160912](https://user-images.githubusercontent.com/93847541/217851770-71190036-52cb-4448-b1ce-9ce6f09a5e6e.png)
 

@@ -22,10 +22,11 @@ then start the server by running
 
 # python manage.py runserver
 
-then head to localhost:8000 to see the available
-the full documentation of the API is available at localhost:800/docs
+then head to localhost:8000 to see the available__
 
-to create superuser, run the following command from the your terminal
+the full documentation of the API is available at localhost:800/docs__
+
+to create superuser, run the following command from the your terminal__
 
 # python manage.py createsuperuser
 

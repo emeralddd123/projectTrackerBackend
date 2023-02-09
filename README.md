@@ -5,7 +5,8 @@ install virtualenv with the command
 # pip install virtualenv
 
 then create a virtualenvironment using
-# virtualenv <env_name>
+
+# virtualenv venv
 
 then activate the virtualenvironment with the command
 # venv/Scripts/activate

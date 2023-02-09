@@ -1,5 +1,15 @@
 # projectTrackerBackend
 after cloning the project, and enter the project folder 'projectTrackerBackend'
+
+install virtualenv with the command
+# pip install virtualenv
+
+then create a virtualenvironment using
+# virtualenv <env_name>
+
+then activate the virtualenvironment with the command
+# venv/Scripts/activate
+
 install the reuirements by running
 # pip install -r requirements.txt
 then start the server by running
